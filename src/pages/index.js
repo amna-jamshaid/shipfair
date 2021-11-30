@@ -4,3 +4,5 @@ export { Reset } from './Reset';
 export { Trips } from './Trips';
 export { Parcels } from './Parcels';
 export { Dashboard } from './Dashboard';
+export { GettingStartedParcel } from './GettingStartedParcel';
+export { GettingStarted } from './GettingStarted';
