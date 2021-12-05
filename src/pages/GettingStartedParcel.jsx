@@ -23,10 +23,18 @@ export const GettingStartedParcel = () => {
           From there, you are match with someone that fits your  <br />
           package siza, travel destination and time preferences.<br />
         </p>
+        <br/>
         <button
           className="GettingStartedParcel__btn"
+          variant="btn btn-success" onClick={() => history.push('PackageOverview')} 
         >
           Next STEP
+        </button>
+        <button
+          className="GettingStartedParcel__btn"
+          variant="btn btn-success" onClick={() => history.push('Parcels')} 
+        >
+          Previous STEP
         </button>
       </header>
       

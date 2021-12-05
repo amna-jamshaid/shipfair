@@ -2,7 +2,7 @@
 import React from "react";
 import "./stylesheets/App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Dashboard, Home, Login, Parcels, Reset, Signup, Trips , GettingStarted , GettingStartedParcel } from "./pages";
+import { Dashboard, Home, Login, Parcels, Reset, Signup, Trips , GettingStarted , GettingStartedParcel , PackageOverview , PackageDetails , FlightDeparture , ItemCapacity} from "./pages";
 import * as ROUTES from "./constants/routes";
 import { Profile } from "./pages/Profile";
 export const App = () => {
@@ -35,12 +35,31 @@ export const App = () => {
       <Route path={ROUTES.GETTINGSTARTED} exact >
         <GettingStarted />
       </Route>
-     
+
+      <Route path={ROUTES.PACKAGEOVERVIEW} exact >
+        <PackageOverview />
+      </Route>
+
+      
+      <Route path={ROUTES.PACKAGEDETAILS} exact >
+        <PackageDetails />
+      </Route>
+
+      <Route path={ROUTES.ITEMCAPACITY} exact >
+        <ItemCapacity />
+      </Route>
+
+      <Route path={ROUTES.FLIGHTDEPARTURE} exact >
+        <FlightDeparture />
+      </Route>
      
       <Route path={ROUTES.DASHBOARD} >
         <Dashboard />
       </Route>
      
+      
+
+      
      
     </Switch>
 </Router>

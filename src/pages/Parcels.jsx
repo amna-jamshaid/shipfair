@@ -17,6 +17,7 @@ import {
         <NavigationBar greeting={`YOUR PARCELS`} />
         <header className="Parcels-header">
           <h1> YOUR PARCELS </h1>
+          <br/>
           <Button
             className="Parcels__btn"
             variant="btn btn-success" onClick={() => history.push('GettingStartedParcel')} >

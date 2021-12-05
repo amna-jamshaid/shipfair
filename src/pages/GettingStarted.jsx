@@ -23,8 +23,10 @@ export const GettingStarted = () => {
           can choose a package that fits your carrying capacity, travel <br />
           destination and time.<br />
         </p>
+        <br/>
         <button
           className="GettingStarted__btn"
+          variant="btn btn-success" onClick={() => history.push('FlightDeparture')}
         >
           Next STEP
         </button>

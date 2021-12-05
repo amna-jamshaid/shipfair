@@ -16,6 +16,7 @@ export const Trips = () => {
       <NavigationBar greeting={`Welcome Back!`} />
       <header className="Trips-header">
         <h1> YOUR TRIPS </h1>
+        <br/>
         <Button
           className="Trips__btn"
           variant="btn btn-success" onClick={() => history.push('GettingStarted')} >

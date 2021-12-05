@@ -8,3 +8,7 @@ export const PARCELS = "/parcels";
 export const DASHBOARD = "/";
 export const GETTINGSTARTEDPARCEL = "/gettingstartedparcel";
 export const GETTINGSTARTED = "/gettingstarted";
+export const PACKAGEOVERVIEW = "/packageoverview";
+export const PACKAGEDETAILS = "/packagedetails";
+export const FLIGHTDEPARTURE = "/flightdeparture";
+export const ITEMCAPACITY = "/itemcapacity";
