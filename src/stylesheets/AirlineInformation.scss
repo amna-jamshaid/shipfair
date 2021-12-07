@@ -1,27 +1,27 @@
-.FlightDeparture {
+.AirlineInformation {
     text-align: left;
   }
   
-  .FlightDeparture-header {
-    background-color: #ffffff;
+  .AirlineInformation-header {
+    background-color: #f3f3f3;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;;
+    color: rgb(0, 0, 0);
   }
   
   
-  .FlightDeparture__btn {
+  .AirlineInformation__btn {
     padding: 10px;
     margin-bottom: 10px;
     color:white;
     background-color: transparent;
     border: none;
     border-radius: 0.4rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 2px 4px 0;
     box-sizing: border-box;
     cursor: pointer;
     font-size: 1.2rem;

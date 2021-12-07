@@ -12,3 +12,6 @@ export const PACKAGEOVERVIEW = "/packageoverview";
 export const PACKAGEDETAILS = "/packagedetails";
 export const FLIGHTDEPARTURE = "/flightdeparture";
 export const ITEMCAPACITY = "/itemcapacity";
+export const FLIGHTARRIVAL = "/flightarrival";
+export const AIRLINEINFORMATION = "/airlineinformation";
+export const CARRYINGCAPACITY = "/carryingcapacity";
