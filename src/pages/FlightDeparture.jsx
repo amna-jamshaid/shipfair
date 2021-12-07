@@ -2,71 +2,77 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { useHistory } from "react-router";
 import "../stylesheets/FlightDeparture.scss";
+import {
+  DashboardContainer,
+  DashboardSideBar,
+  NavigationBar,
+} from "../components";
 
 
-export class FlightDeparture extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { value: "Choose your flight" };
 
-    // this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
+export const FlightDeparture = () => {
+  const history = useHistory();
+  {
 
-  handleSubmit(event) {
-    // alert("Your favorite flavor is: " + this.state.value);
-    event.preventDefault();
-  }
 
-  handleChange = event => {
-    this.setState({ value: event.target.value });
-  };
-  render() {
-
-    <header className="FlightDeparture-header">
-        <p>
-          Welcome to the the ShipFair Website
-        </p>
-      </header>
     return (
-      <form className="FlightDeparture-header" onSubmit={this.handleSubmit}>
-        <label>
-        <h1> FLIGHT DEPARTURE </h1>
-        <p> Give us information on your departure flight so we can optimize the packages that you see.</p>
-
-                
-    NAME YOUR TRIP <br/>
-    <input type="text" name="Trip Name" />
-    <br/>
-    <br/>TYPE OF TRIP
-         <br/>
-          <select value={this.state.value} onChange={this.handleChange}><br/>
-            <option value="Business">Business</option>
-            <option value="Educational">Educational</option>
-            <option value="Family">Family</option>
-            <option value="Government">Government</option>
-            <option value="Leisure">Leisure</option>
-            <option value="Voluntourism">Voluntourism</option>
-            <option value="Work">Work</option>     
-            </select><br/>
+      <div className="FlightDeparture">
+        <div className="dashboard_greeting_container">
+          <NavigationBar greeting={`Welcome back!`} />
+          <header className="FlightDeparture-header">
+          
+            <label>
+              <h1> FLIGHT DEPARTURE </h1>
+              <p> Give us information on your departure flight so we can optimize the packages that you see.</p>
 
 
-    <br/>WHERE WILL YOU START THIS TRIP?<br/>
-   <input type="text" name="Trip Start" /><br/> 
+              NAME YOUR TRIP <br />
+              <input type="text" name="Trip Name" />
+              <br />
+              <br />TYPE OF TRIP
+              <br />
+              <select ><br />
+                <option value="Business">Business</option>
+                <option value="Educational">Educational</option>
+                <option value="Family">Family</option>
+                <option value="Government">Government</option>
+                <option value="Leisure">Leisure</option>
+                <option value="Voluntourism">Voluntourism</option>
+                <option value="Work">Work</option>
+              </select><br />
 
-   <br/>WHAT'S YOUR DEPARTURE AIRPORT CODE?<br/>
-   <input type="text" name="Code" /><br/> 
 
-   <br/>DEAPARTURE DATE<br/>
-   <input type="date" name="date" /><br/> 
- 
- 
-        <br/>
-       <input  className="FlightDeparture__btn " type="submit" value="NEXT STEP" /> <br/> 
-        <input className="FlightDeparture__btn " type="button" value="PREVIOUS STEP" onClick = "GettingStarted" />
+              <br />WHERE WILL YOU START THIS TRIP?<br />
+              <input type="text" name="Trip Start" /><br />
+
+              <br />WHAT'S YOUR DEPARTURE AIRPORT CODE?<br />
+              <input type="text" name="Code" /><br />
+
+              <br />DEAPARTURE DATE<br />
+              <input type="date" name="date" /><br />
+
+
+              <br />
+              <button
+                className="FlightDeparture__btn"
+                variant="btn btn-success" onClick={() => history.push('FlightArrival')}
+              >
+                Next STEP
+              </button>
+              <br />
+              <button
+                className="FlightDeparture__btn"
+                variant="btn btn-success" onClick={() => history.push('GettingStarted')}
+              >
+                Previous STEP
+              </button>
+
+            </label>
+
+          </header>
+        </div>
         
-        </label>
-        </form>
+      </div>
     );
   }
 }

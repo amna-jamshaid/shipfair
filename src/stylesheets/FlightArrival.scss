@@ -1,8 +1,8 @@
-.FlightDeparture {
+.FlightArrival {
     text-align: left;
   }
   
-  .FlightDeparture-header {
+  .FlightArrival-header {
     background-color: #ffffff;
     min-height: 100vh;
     display: flex;
@@ -10,18 +10,18 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: white;;
+    color: white;
   }
   
   
-  .FlightDeparture__btn {
+  .FlightArrival__btn {
     padding: 10px;
     margin-bottom: 10px;
-    color:white;
+    color:rgb(255, 255, 255);
     background-color: transparent;
     border: none;
     border-radius: 0.4rem;
-    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px 0;
+    box-shadow: rgba(216, 77, 142, 0.1) 0 2px 4px 0;
     box-sizing: border-box;
     cursor: pointer;
     font-size: 1.2rem;
@@ -37,6 +37,5 @@
     touch-action: manipulation;
     position: relative;
     background-color: #f1356d
-  
   }
   

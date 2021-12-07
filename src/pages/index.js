@@ -10,3 +10,6 @@ export { PackageOverview } from './PackageOverview';
 export { PackageDetails } from './PackageDetails';
 export { FlightDeparture } from './FlightDeparture';
 export { ItemCapacity } from './ItemCapacity';
+export { FlightArrival } from './FlightArrival';
+export { AirlineInformation } from './AirlineInformation';
+export { CarryingCapacity } from './CarryingCapacity';

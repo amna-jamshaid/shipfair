@@ -2,7 +2,7 @@
 import React from "react";
 import "./stylesheets/App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Dashboard, Home, Login, Parcels, Reset, Signup, Trips , GettingStarted , GettingStartedParcel , PackageOverview , PackageDetails , FlightDeparture , ItemCapacity} from "./pages";
+import { Dashboard, Home, Login, Parcels, Reset, Signup, Trips , GettingStarted , GettingStartedParcel , PackageOverview , PackageDetails , FlightDeparture , ItemCapacity , FlightArrival , AirlineInformation , CarryingCapacity} from "./pages";
 import * as ROUTES from "./constants/routes";
 import { Profile } from "./pages/Profile";
 export const App = () => {
@@ -51,6 +51,18 @@ export const App = () => {
 
       <Route path={ROUTES.FLIGHTDEPARTURE} exact >
         <FlightDeparture />
+      </Route>
+
+      <Route path={ROUTES.FLIGHTARRIVAL} exact >
+        <FlightArrival />
+      </Route>
+
+      <Route path={ROUTES.AIRLINEINFORMATION} >
+        <AirlineInformation />
+      </Route>
+
+      <Route path={ROUTES.CARRYINGCAPACITY} >
+        <CarryingCapacity />
       </Route>
      
       <Route path={ROUTES.DASHBOARD} >
