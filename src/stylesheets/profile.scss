@@ -52,7 +52,9 @@
     align-items: center;
 }
 .verification-heading {
-    color: white;
+    color: #ffffff;
+    background: radial-gradient(circle farthest-side at 10% 10%, rgb(242, 106, 97) 0%, rgb(159, 35, 101) 100%);
+    border: 2px none rgb(0, 168, 150);
     margin-left: 23px;
     font-size: 20px;
 }
