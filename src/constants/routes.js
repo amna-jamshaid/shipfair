@@ -23,3 +23,7 @@ export const STUFF = "/stuff";
 export const FINALE = "/finale";
 export const DOCUMENT = "/document";
 export const TRUSTEDCOMMUNITY = "/trustedcommunity";
+export const START_PKGS = "/gettingstartpkgs";
+export const CONTACT = "/contact";
+export const CHAT = "/chat";
+

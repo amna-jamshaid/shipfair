@@ -46,6 +46,7 @@ export const Signup = () => {
           autoComplete="off"
           onChange={(e) => setGender(e.target.value)}
           placeholder="Gender"
+          required
         />
 
         <input
@@ -55,6 +56,7 @@ export const Signup = () => {
           autoComplete="off"
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail Address"
+          required
         />
         <input
           type="password"
@@ -62,6 +64,7 @@ export const Signup = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Password"
+          required
         />
         <button className="register__btn" onClick={register}>
           Register
@@ -76,7 +79,7 @@ export const Signup = () => {
           <p className="btn-text">Sign in with Google</p>
         </div>
         <div>
-          <p>Already have an account? <Link className="forget__password"to="/login">Login</Link> now.</p>
+          <p className="signup_text">Already have an account? <Link className="forget__password"to="/login">Login</Link> now.</p>
         </div>
       </div>
     </div>

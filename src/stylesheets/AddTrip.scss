@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .dashboard_container.trips {
-    margin: 24px -118px;
+    width: 1200px;
+    margin-left: -222px;
+
 }
 .add_trip_heading {
     color: #000000;
@@ -93,8 +95,14 @@
 .add_trip_options_container {
     margin-left: 2px;
 }
+.airport_departure_code {
+    display: flex;
+    flex-direction: column;
+    height: 105px;
+}
 .button.add_trip_submit {
     margin-top: 50px;
+
     padding: 10px;
     margin-bottom: 10px;
     color:white;
@@ -119,4 +127,11 @@
     background: radial-gradient(circle farthest-side at 10% 10%, rgb(242, 106, 97) 0%, rgb(159, 35, 101) 100%);
     border: 2px none rgb(0, 168, 150);
   
+
+}
+.add_trip_input.code {
+    margin-left: 36px;
+    margin-top: -23px;
+
+
 }
