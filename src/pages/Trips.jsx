@@ -18,19 +18,9 @@ export const Trips = () => {
   console.log(ROUTES);
 
   return (
-    <div className="Trips">
+    <div>
       <div className="dashboard_greeting_container">
-      <NavigationBar greeting={`Welcome Back!`} />
-      <header className="Trips-header">
-        <h1> YOUR TRIPS </h1>
-        <br/>
-        <Button
-          className="Trips__btn"
-          variant="btn btn-success" onClick={() => history.push('GettingStarted')} >
-              ADD A TRIP
-        </Button>
-      </header>
-      
+        <NavigationBar greeting={"YOUR TRIPS"} />
       </div>
       <DashboardSideBar />
       <div className="dashboard_container">
@@ -45,6 +35,5 @@ export const Trips = () => {
       </div>
 
     </div>
-
   );
 };
