@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "../stylesheets/Contact.scss";
 import { NavigationBar } from "../components"
+import Footer from "../components/Footer";
+import { db } from "../libraries/firebase";
 
 const Contact = () => {
     const [name, setName] = useState("");
@@ -13,20 +15,20 @@ const Contact = () => {
     e.preventDefault();
     setLoader(true);
 
-    // db.collection("contacts")
-    //   .add({
-    //     name: name,
-    //     email: email,
-    //     message: message,
-    //   })
-    //   .then(() => {
-    //     setLoader(false);
-    //     alert("Your message has been submitted👍");
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //     setLoader(false);
-    //   });
+    db.collection("contacts")
+      .add({
+        name: name,
+        email: email,
+        message: message,
+      })
+      .then(() => {
+        setLoader(false);
+        alert("Your message has been submitted👍");
+      })
+      .catch((error) => {
+        alert(error.message);
+        setLoader(false);
+      });
 
     setName("");
     setEmail("");
@@ -68,7 +70,10 @@ const Contact = () => {
 
      <button className="button submit">Submit</button>
     </form>
+
+      
     </div>
+    <Footer/>
     </>
     
   );

@@ -10,6 +10,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router";
 import { Details } from "../components/Details";
 import { AdditionalDetails } from "../components/AdditionalDetails";
+import Footer from "../components/Footer";
 // import Button from '@mui/material/Button';
 // import "../assets/shipfair-logo.png";
 
@@ -30,7 +31,7 @@ export const Profile = () => {
       setName(data.name);
     } catch (err) {
       console.error(err);
-      alert("An error occured while fetching user data");
+      console.log("An error occured while fetching user data");
     }
   };
 
@@ -106,6 +107,10 @@ export const Profile = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="footer_container_profile">
+
+        <Footer/>
       </div>
       {/* </div> */}
     </>
