@@ -13,19 +13,27 @@ import usePackages from "./hooks/use-packages";
 import { FeedContext } from "./context/feed-context";
 import Gettingstartedtrips from "./pages/Forms/gettingstartedtrips";
 
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import Chat from "./pages/Chat";
+import useTrips from "./hooks/use-trips";
+import GettingStartedPkg from "./pages/Forms/gettingstartpkgs";
+
+
 export const App = () => {
 
   const { packages } = usePackages();
-  const Ctx = useContext(FeedContext);
   console.log(packages);
+  const Ctx = useContext(FeedContext);
+  Ctx.updatePkgs(packages);
+  const { trips } = useTrips();
+  Ctx.updateTrips(trips);
 
-  useEffect(() => {
-    Ctx.updatePkgs(packages);
-  }, []);
 
   return (
 
     
+    <>
     <Router>
     <Switch>
       <Route path={ROUTES.LOGIN} exact>
@@ -43,11 +51,20 @@ export const App = () => {
       <Route path={ROUTES.ADD_PACKAGE} exact>
         <AddPackage />
       </Route>
+      <Route path={ROUTES.START_TRIPS} exact>
+        <GettingStartedTrip/>
+      </Route>
       <Route path={ROUTES.SIGN_UP} exact>
-        <Gettingstartedtrips />
+        <Signup />
+      </Route>
+      <Route path={ROUTES.START_PKGS} exact>
+        <GettingStartedPkg />
       </Route>
       <Route path={ROUTES.START_TRIPS} exact>
-        <Signup />
+        <GettingStartedPkg />
+      </Route>
+      <Route path={ROUTES.CONTACT} exact>
+        <Contact />
       </Route>
       <Route path={ROUTES.RESET} exact>
         <Reset />
@@ -61,6 +78,7 @@ export const App = () => {
       <Route path={ROUTES.PARCELS} exact >
         <Parcels />
       </Route>
+
 
       <Route path={ROUTES.ONBOARDING} exact >
         <Onboarding />
@@ -110,6 +128,11 @@ export const App = () => {
         <Trustedcommunity />
       </Route>
 
+
+      <Route path={ROUTES.CHAT} exact >
+        <Chat/>
+      </Route>
+
       <Route path={ROUTES.DASHBOARD} >
         <Dashboard />
       </Route>
@@ -118,6 +141,9 @@ export const App = () => {
      
      
     </Switch>
+
 </Router>
+    </>
+
   );
 };
