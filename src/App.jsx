@@ -24,6 +24,8 @@ export const App = () => {
   }, []);
 
   return (
+
+    
     <Router>
     <Switch>
       <Route path={ROUTES.LOGIN} exact>

@@ -4,6 +4,7 @@ import Button from '@material-ui/core/Button';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
 import IconButton from '@material-ui/core/IconButton';
 import { useHistory } from "react-router";
+import {app} from "../libraries/firebase";
 import {
     NavigationBar,
 } from "../components";
@@ -11,14 +12,22 @@ import {
 
 export const Document = () => {
     const history = useHistory();
-    const [document, setDocument] = useState("");
+    // const [file, setFile] = useState("");
+    const uploadHandler = typeof window === 'object' ? require('../libraries/firebase').imageHandler : () => false; // ssr only
 
-    const submitHandler = (e) => {
-        e.preventDefault();
-        setDocument("");
+    const onChange = (e) => {
+        const file = e.target.files[0];
+        
+    }
+
+    const submitHandler = (f) => {
+        f.preventDefault();
+        
         history.push("Trustedcommunity");
     };
     return (
+
+       
         <div className="Onboarding">
             <div className="dashboard_greeting_container">
             <form onSubmit={submitHandler}>
@@ -54,8 +63,8 @@ export const Document = () => {
                             style={{ display: 'none' }}
                             id="contained-button-file"
                             autoComplete="off"
-                            value={document}
-                            onChange={(e) => setDocument(e.target.value)}
+                            // value={file}
+                            onChange = {onChange}
                         />
                             <Button variant="contained" color="primary" component="span">
                                 Upload
@@ -63,7 +72,7 @@ export const Document = () => {
                         </label>
                         <h3>  OR  </h3>
                         <input accept="image/*" id="icon-button-file"
-                            type="file" style={{ display: 'none' }} />
+                            type="file" style={{ display: 'none' }} onChange = {onChange}/>
                         <label htmlFor="icon-button-file">
                             <IconButton color="primary" aria-label="upload picture"
                                 component="span">

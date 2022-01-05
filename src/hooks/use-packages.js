@@ -9,15 +9,7 @@ const usePackages = () => {
 
 
     async function updatePkgs (movie) {
-        const response = await fetch("https://shipfair-a6766-default-rtdb.firebaseio.com/pkgs.json", {
-          method: 'POST',
-          body: JSON.stringify(movie),
-          headers: {
-            'Content-Type': 'application/json'
-          }
-        });
-        const data = await response.json();
-        console.log(data);
+        
       }
 
       updatePkgs(JSON.parse(localStorage.getItem('packages')));
