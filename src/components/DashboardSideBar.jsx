@@ -9,13 +9,14 @@ import { BiUserCircle } from 'react-icons/bi';
 import { Profile } from '../pages/Profile';
 import { useHistory } from 'react-router';
 
+import { BiStar}  from 'react-icons/bi';
 
 export const DashboardSideBar = (props) => {
     const history = useHistory();
     return (
         <div className="side_bar_container">
             
-            <div onClick={() => history.push("/")}>
+            <div onClick={() => history.push("/dashboard")}>
            < DashboardSideBarItem icon={<AiOutlineHome/>} title={"Home"}/>
            </div>
 
@@ -29,13 +30,20 @@ export const DashboardSideBar = (props) => {
            < DashboardSideBarItem icon={<FiPackage/>} title={"Parcels"}/>
            </div>
            
-           < DashboardSideBarItem icon={<BiMessageDetail/>} title={"Messages"}/>
-           <div onClick={() => history.push("/profile")}>
+           <div onClick={() => history.push("/chat")}>
 
+           < DashboardSideBarItem icon={<BiMessageDetail/>} title={"Messages"}/>
+           </div>
+           {/* <div onClick={() => history.push("/parcels")}> */}
+
+        <div onClick={() => history.push("/profile")}>
            < DashboardSideBarItem icon={<BiUserCircle/>} title={"Profile"}/>
            </div>
         
-
+           <div onClick={() => history.push("/Review")}>
+           < DashboardSideBarItem icon={<BiStar/>} title={"Review"}/>
+           </div>
+           
         </div>
     )
 }

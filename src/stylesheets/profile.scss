@@ -52,7 +52,9 @@
     align-items: center;
 }
 .verification-heading {
-    color: white;
+    color: #ffffff;
+    background: radial-gradient(circle farthest-side at 10% 10%, rgb(242, 106, 97) 0%, rgb(159, 35, 101) 100%);
+    border: 2px none rgb(0, 168, 150);
     margin-left: 23px;
     font-size: 20px;
 }
@@ -62,12 +64,12 @@
     width: 30px;
 }
 .profile-main-container {
-    width: 1136px;
+    width: 1196px;
     position: absolute;
-    background-color:#f2f0e5;
+    background-color: #f2f0e5;
     padding: 2rem;
-    margin-left: 166px;
-    height: 1120px;
+    margin-left: 96px;
+    height: 1100px;
 }
 .username {
     position: absolute;
@@ -90,13 +92,13 @@
     margin: 61px 100px;
     box-sizing: border-box;
     z-index: 2;
-    height: 1100px;
+    height: 1050px;
     top: 0px;
-    background-color: rgba(230, 230, 230, 0.54);
+    background-color: #cacac8;
     border-style: solid;
     border-width: 1px;
     border-color: rgba(171, 171, 171, 0);
-    border-radius: 20px;
+    border-radius: 20px 20px 0px 0px;
 }
 
 .profile-image-container{
@@ -220,4 +222,7 @@ width: 235px;
 a {
 text-decoration: none;
 color: inherit;
+}
+.footer_container_profile {
+    margin-top: 1163px;
 }

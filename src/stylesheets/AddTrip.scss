@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
 
 .dashboard_container.trips {
-    margin: 24px -118px;
+    width: 1200px;
+    margin-left: -222px;
+
 }
 .add_trip_heading {
-    color: #EF6761;
+    color: #000000;
     font-size: 32px;
     font-family: Montserrat;
 }
@@ -40,6 +42,28 @@
 }
 .add_trip_description {
 
+    border: 1px solid rgba(0, 0, 0, 0.41);
+    background-color: #ffffff;
+    position: relative;
+    box-sizing: border-box;
+    z-index: 32;
+    height: 40px;
+    border-radius: 5px;
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    color: #242934;
+    padding: 0px 10px;
+    top: 2px;
+    width: 461px;
+    height: 90px;
+    left: 2px;
+    resize: none;
+
+}
+
+.add_trip_descrip {
+
     border: 1px solid rgba(171, 171, 171, 0.41);
     background-color: #fcfcfc;
     position: relative;
@@ -59,6 +83,7 @@
     resize: none;
 
 }
+
 .add_trip_desc_container {
     margin-top: 30px;
     display: flex;
@@ -70,6 +95,43 @@
 .add_trip_options_container {
     margin-left: 2px;
 }
+.airport_departure_code {
+    display: flex;
+    flex-direction: column;
+    height: 105px;
+}
 .button.add_trip_submit {
     margin-top: 50px;
+
+    padding: 10px;
+    margin-bottom: 10px;
+    color:white;
+    background-color: transparent;
+    border: none;
+    border-radius: 0.4rem;
+    box-shadow: rgba(255, 255, 255, 0.1) 0 2px 4px 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 0.6rem 1.5rem;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    position: relative;
+    background: radial-gradient(circle farthest-side at 10% 10%, rgb(242, 106, 97) 0%, rgb(159, 35, 101) 100%);
+    border: 2px none rgb(0, 168, 150);
+  
+
+}
+.add_trip_input.code {
+    margin-left: 36px;
+    margin-top: -23px;
+
+
 }

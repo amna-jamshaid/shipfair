@@ -11,3 +11,21 @@ export const ADD_TRIP = "/addtrip";
 export const ALL_PKGS = "/allpackages";
 export const ALL_TRIPS = "/alltrips";
 export const START_TRIPS = "/gettingstartedtrips";
+export const ONBOARDING = "/onboarding";
+export const BIRTHDAY = "/birthday";
+export const GENDER = "/gender";
+export const COUNTRY = "/country";
+export const ADDRESS = "/address";
+export const COMMUNITY = "/community";
+export const ROLE = "/role";
+export const FUN = "/fun";
+export const STUFF = "/stuff";
+export const FINALE = "/finale";
+export const DOCUMENT = "/document";
+export const TRUSTEDCOMMUNITY = "/trustedcommunity";
+export const START_PKGS = "/gettingstartpkgs";
+export const CONTACT = "/contact";
+export const CHAT = "/chat";
+
+export const REVIEW = "/Review";
+

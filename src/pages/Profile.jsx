@@ -10,6 +10,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useHistory } from "react-router";
 import { Details } from "../components/Details";
 import { AdditionalDetails } from "../components/AdditionalDetails";
+import Footer from "../components/Footer";
 // import Button from '@mui/material/Button';
 // import "../assets/shipfair-logo.png";
 
@@ -30,7 +31,7 @@ export const Profile = () => {
       setName(data.name);
     } catch (err) {
       console.error(err);
-      alert("An error occured while fetching user data");
+      console.log("An error occured while fetching user data");
     }
   };
 
@@ -55,8 +56,13 @@ export const Profile = () => {
           <div className="profile-image-container">
             <p className="joining-date">{`Joined on ${new Date().toLocaleDateString("en-US", {month:"long",day:"numeric"})},2021`}</p>
             <div className="verification">
-              <p className="verification-heading">Get Verified</p>
-            </div>
+              <button
+                className= "verification-heading"
+                variant="btn btn-success" onClick={() => {history.push('Onboarding')}}
+              >                
+              Get Verified </button>
+              </div>
+            
             <Stack direction="row" alignItems="center" spacing={2}>
               <label htmlFor="icon-button-file">
                 <Input
@@ -73,6 +79,7 @@ export const Profile = () => {
                   <PhotoCamera className="camera" />
                 </IconButton>
               </label>
+              
             </Stack>
             <div className="username">
               <h2 className="username-heading">{name}</h2>
@@ -103,9 +110,15 @@ export const Profile = () => {
             <div className="card-4 review">
             <p id="about_content"></p>
               <p className="details-heading"></p>
+
+              
             </div>
           </div>
         </div>
+      </div>
+      <div className="footer_container_profile">
+
+        <Footer/>
       </div>
       {/* </div> */}
     </>
