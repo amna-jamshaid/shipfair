@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import {
     NavigationBar,
 } from "../components";
+import Footer from "../components/Footer";
 
 
 export const Trustedcommunity = () => {
@@ -12,26 +13,34 @@ export const Trustedcommunity = () => {
         <div className="Onboarding">
             <div className="dashboard_greeting_container">
                 <NavigationBar greeting={`Welcome back!`} />
-                <header className="Onboarding-header">
-                    <h1> Welcome to our trusted community of travelers and shippers.</h1>
-                   
-                    <br />
-                    
-                    <button
-                        className="Onboarding__btn"
-                        variant="btn btn-success" onClick={() => history.push('Dashboard')}
-                    >
-                        Take Me To My Dashboard
-                    </button>
+            </div>
 
-                    <br/>
-                    <button
-                        className="Onboarding__btn"
-                        variant="btn btn-success" onClick={() => history.push('Document')}
-                    >
-                        Back
-                    </button>
+            <form>
+            <header className="Onboarding-header">
+                <h1> Welcome to our trusted community of travelers and shippers.</h1>
                 </header>
+                <br />
+
+                <button
+                    className="Onboarding__btn"
+                    variant="btn btn-success" onClick={() => history.push('Dashboard')}
+                >
+                    Take Me To My Dashboard
+                </button>
+
+                <br />
+                <button
+                    className="Onboarding__btn"
+                    variant="btn btn-success" onClick={() => history.push('Document')}
+                >
+                    Back
+                </button>
+               
+            
+            </form>
+
+            <div>
+                <Footer />
             </div>
         </div>
     );

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { NavigationBar } from "../components";
 import "../stylesheets/AddTrip.scss";
+import Footer from "../components/Footer";
 
 export const Role = () => {
   const [title, setTitle] = useState("");
@@ -19,9 +20,11 @@ export const Role = () => {
   };
 
   return (
-    <>
-      <NavigationBar />
-      <div className="dashboard_container trips">
+    
+    <div className="Onboarding">
+    <div className="dashboard_greeting_container">
+        <NavigationBar greeting={`Welcome back!`} />
+    </div>
         <form onSubmit={submitHandler}>
           <h1 className="add_trip_heading">To maintain a trusted community of  travelers and shippers,<br/> 
            we also need to learn a bit about the work you do</h1>
@@ -94,8 +97,11 @@ export const Role = () => {
                         Next
                     </button>
         </form>
+        <div> 
+            <Footer/>
+            </div>
       </div>
-    </>
+    
   );
 };
 

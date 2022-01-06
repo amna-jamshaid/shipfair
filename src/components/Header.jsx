@@ -1,9 +1,6 @@
 import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 
-
-
-
 export const Header = () => {
   const history = useHistory();
   return (

@@ -4,20 +4,10 @@ import axios from "axios";
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { auth } from '../libraries/firebase';
 
-export const usePackages = () => {
+const usePackages = () => {
   
   const [packages, setPackages] = useState([]);
   console.log("usePackages hook calling");
-
-  useEffect(() => {
-
-
-    async function updatePkgs (movie) {
-        
-      }
-
-      updatePkgs(JSON.parse(localStorage.getItem('packages')));
-
 
   const [user] = useAuthState(auth);
 
@@ -58,7 +48,6 @@ export const usePackages = () => {
 
   return { packages };
 }
-)
-};
+;
 
-export default use-packages;
+export default usePackages;

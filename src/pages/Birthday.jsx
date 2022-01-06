@@ -8,6 +8,7 @@ import {
 
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import Footer from "../components/Footer";
 
 
 export const Birthday = () => {
@@ -22,10 +23,12 @@ export const Birthday = () => {
     return (
         <div className="Onboarding">
             <div className="dashboard_greeting_container">
+            <NavigationBar greeting={`Welcome back!`} />
             <form onSubmit={submitHandler}>
-                <NavigationBar greeting={`Welcome back!`} />
+                
                 <header className="Onboarding-header">
                     <h1> What is your birthday? </h1>
+                    
                     <p align="left">
                         (No worries much of this information will not be shown publicly <br />
                         on your profile).
@@ -48,8 +51,12 @@ export const Birthday = () => {
                         Previous
                     </button>
                     <button className="button add_trip_submit">Submit</button>
-                </header>
+                    </header>
                 </form>
+                
+            </div>
+            <div> 
+            <Footer/>
             </div>
         </div>
     );

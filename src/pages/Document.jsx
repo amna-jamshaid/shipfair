@@ -8,6 +8,7 @@ import {app} from "../libraries/firebase";
 import {
     NavigationBar,
 } from "../components";
+import Footer from "../components/Footer";
 
 
 export const Document = () => {
@@ -98,6 +99,9 @@ export const Document = () => {
                     </button>
                 </header>
                 </form>
+            </div>
+            <div> 
+            <Footer/>
             </div>
         </div>
     );

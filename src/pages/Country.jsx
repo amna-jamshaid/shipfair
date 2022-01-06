@@ -6,6 +6,7 @@ import { CountryDropdown, RegionDropdown } from 'react-country-region-selector';
 import {
     NavigationBar,
 } from "../components";
+import Footer from "../components/Footer";
 
 
 
@@ -20,12 +21,12 @@ export const Country = () => {
     };
 
     return (
-
-
-            <div className="dashboard_container trips">
-                
-                <NavigationBar greeting={`Welcome back!`} />
+        <div className="Onboarding">
+        <div className="dashboard_greeting_container">
+        <NavigationBar greeting={`Welcome back!`} />
+        </div>
                 <form onSubmit={submitHandler}>
+                    <header>
                     <h1> What is your place of birth? </h1>
 
                     <br />
@@ -53,9 +54,13 @@ export const Country = () => {
 
 
                     <button className="button add_trip_submit">Submit</button>
-
+                    </header>
                 </form>
+                <div> 
+            <Footer/>
             </div>
+            </div>
+            
 
            
         

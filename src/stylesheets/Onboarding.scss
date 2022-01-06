@@ -38,5 +38,12 @@
     position: relative;
     background: radial-gradient(circle farthest-side at 10% 10%, rgb(242, 106, 97) 0%, rgb(159, 35, 101) 100%);
     border: 2px none rgb(0, 168, 150);
+
+    .add_board_desc_container {
+      box-align: center;
+      margin-top: 30px;
+      display: flex;
+      
+  }
   
   }

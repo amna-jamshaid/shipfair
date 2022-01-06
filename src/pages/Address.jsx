@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { NavigationBar } from "../components";
 import "../stylesheets/AddTrip.scss";
+import Footer from "../components/Footer";
 
 export const Address = () => {
     const [description, setDescription] = useState("");
@@ -20,23 +21,30 @@ export const Address = () => {
     };
 
     return (
-        <>
-            <NavigationBar />
-            <div className="dashboard_container trips">
-                <form onSubmit={submitHandler}>
-                    <h1 className="add_trip_heading">Where do you live? <br/>
-We'll use this information to match you with better packages and travelers.</h1>
-List a permanent address where you might get official mail sent, like a bank statements,<br/>
- or diploma sent. Also list a temporary one if you live or work more than half the year <br/>
-  in another country. 
+
+        <div className="Onboarding">
+            <div className="dashboard_greeting_container">
+                <NavigationBar greeting={`Welcome back!`} />
+            </div>
+
+            <form onSubmit={submitHandler}>
+                <header>
+                    <h1 className="add_trip_heading">Where do you live? <br />
+                        We'll use this information to match you with better packages and travelers.</h1>
+                    List a permanent address where you might get official mail sent, like a bank statements,<br />
+                    or diploma sent. Also list a temporary one if you live or work more than half the year <br />
+                    in another country.
                     <div>
                         <div className="add_trip_container">
-                            
+
                         </div>
                         <div>
-                            <div className="add_trip_desc_container">
+
+                            <h4>Sex</h4>
+                            <br/>
+                            <div className="add_board_desc_container">
                                 <label className="trip_input_labels one" htmlFor="description">
-                                    Temporary Address
+                                    <h2>Temporary Address</h2>
                                 </label>
                                 <textarea
                                     className="add_trip_description"
@@ -50,12 +58,12 @@ List a permanent address where you might get official mail sent, like a bank sta
                             </div>
                         </div>
                         <div>
-                            <div className="add_trip_desc_container">
+                            <div className="add_board_desc_container">
                                 <label className="trip_input_labels one" htmlFor="description">
-                                    Permanent Address
+                                    <h3>Permanent Address</h3>
                                 </label>
                                 <textarea
-                                    className="add_trip_descrip"
+                                    className="add_trip_description"
                                     autoComplete="off"
                                     id="descrip"
                                     value={descrip}
@@ -65,21 +73,21 @@ List a permanent address where you might get official mail sent, like a bank sta
                                 ></textarea>
                             </div>
                         </div>
-                        
+
                         <div></div>
                     </div>
 
                     <div>
                         <button className="button add_trip_submit">Submit</button>
                     </div>
-                   
+
                     <button
                         className="button add_trip_submit"
                         variant="btn btn-success" onClick={() => history.push('Country')}
                     >
                         Previous
                     </button>
-                   
+
 
 
                     <button
@@ -88,9 +96,14 @@ List a permanent address where you might get official mail sent, like a bank sta
                     >
                         Next
                     </button>
-                </form>
+                </header>
+            </form>
+            <div>
+                <Footer />
             </div>
-        </>
+        </div>
+
+
     );
 };
 

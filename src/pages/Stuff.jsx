@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { NavigationBar } from "../components";
 import "../stylesheets/AddTrip.scss";
+import Footer from "../components/Footer";
 
 export const Stuff = () => {
     const [description, setDescription] = useState("");
@@ -16,9 +17,11 @@ export const Stuff = () => {
     };
 
     return (
-        <>
-            <NavigationBar />
-            <div className="dashboard_container trips">
+        
+        <div className="Onboarding">
+        <div className="dashboard_greeting_container">
+            <NavigationBar greeting={`Welcome back!`} />
+        </div>
                 <form onSubmit={submitHandler}>
                     <h1 className="add_trip_heading">Now it's time for the fun stuff.<br/></h1>
                     Over the last two years, (when we weren’t experiencing a global <br/>
@@ -33,17 +36,14 @@ export const Stuff = () => {
                             
                         </div>
                         <div>
-                            <div className="add_trip_desc_container">
-                                <label className="trip_input_labels one" htmlFor="description">
-                                    
-                                </label>
+                            <div className="add_board_desc_container">
                                 <textarea
                                     className="add_trip_description"
                                     autoComplete="off"
                                     id="description"
                                     value={description}
                                     onChange={(e) => setDescription(e.target.value)}
-                                    cols="30"
+                                    cols="10"
                                     rows="10"
                                 ></textarea>
                             </div>
@@ -72,8 +72,11 @@ export const Stuff = () => {
                         Next
                     </button>
                 </form>
+                <div> 
+            <Footer/>
             </div>
-        </>
+            </div>
+        
     );
 };
 

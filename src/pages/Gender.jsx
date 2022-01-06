@@ -4,6 +4,7 @@ import { useHistory } from "react-router";
 import {
     NavigationBar,
 } from "../components";
+import Footer from "../components/Footer";
 
 
 
@@ -58,6 +59,9 @@ export const Gender = () => {
                         Next
                     </button>
                 </header>
+            </div>
+            <div> 
+            <Footer/>
             </div>
         </div>
     );

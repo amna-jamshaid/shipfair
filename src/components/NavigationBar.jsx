@@ -25,7 +25,7 @@ export const NavigationBar = (props) => {
                 </Link>
                 <div className="navbar_links">
                     <ul>
-                        <Link to ="/">
+                        <Link to ="/Dashboard">
                         <li>HOME</li>
                         </Link>
                         <Link to='/allpackages'>

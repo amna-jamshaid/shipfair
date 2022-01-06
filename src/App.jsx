@@ -12,7 +12,10 @@ import AllTrips from "./pages/AllTrips";
 import usePackages from "./hooks/use-packages";
 import { FeedContext } from "./context/feed-context";
 import Gettingstartedtrips from "./pages/Forms/gettingstartedtrips";
-
+import Header from './components/Header'
+import Showcase from './components/Showcase'
+import Destinations from './components/Destinations'
+import GettingStartedTrip from "./pages/Forms/gettingstartedtrips";
 import Contact from "./pages/Contact";
 import Footer from "./components/Footer";
 import Chat from "./pages/Chat";
@@ -35,7 +38,16 @@ export const App = () => {
     
     <>
     <Router>
+    <Header />
+
     <Switch>
+
+      
+    <Route exact path='/'>
+   
+          <Showcase />
+          <Destinations />
+        </Route>
       <Route path={ROUTES.LOGIN} exact>
         <Login />
       </Route>
@@ -137,6 +149,7 @@ export const App = () => {
         <Dashboard />
       </Route>
 
+      
       
      
      

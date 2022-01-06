@@ -15,7 +15,7 @@ export const DashboardSideBar = (props) => {
     return (
         <div className="side_bar_container">
             
-            <div onClick={() => history.push("/")}>
+            <div onClick={() => history.push("/dashboard")}>
            < DashboardSideBarItem icon={<AiOutlineHome/>} title={"Home"}/>
            </div>
 
