@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Showcase = () => {
+export const Showcase = () => {
   return (
     <section className='showcase'>
       <div className='showcase-overlay'>

@@ -23,6 +23,8 @@ import useTrips from "./hooks/use-trips";
 import GettingStartedPkg from "./pages/Forms/gettingstartpkgs";
 
 
+import  Review  from "./pages/Review";
+
 export const App = () => {
 
   const { packages } = usePackages();
@@ -91,6 +93,9 @@ export const App = () => {
         <Parcels />
       </Route>
 
+      <Route path={ROUTES.REVIEW} exact >
+        <Review />
+      </Route>
 
       <Route path={ROUTES.ONBOARDING} exact >
         <Onboarding />

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Error = () => {
+export const Error = () => {
   return (
     <div
       style={{

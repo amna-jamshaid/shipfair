@@ -4,7 +4,7 @@ import shipper from '../assets/shipper.png'
 import chatsection from '../assets/chat-section.jpg'
 import Footer from "../components/Footer";
 
-const Destinations = () => {
+export const Destinations = () => {
   return (
     <>
     <section className='destinations'>
