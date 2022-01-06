@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  line-height: 1.8;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #16212d;
+
+}
+
+.header .links {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.showcase {
+  background: url('https://www.ttrweekly.com/site/wp-content/uploads/2018/06/Business-traveller-600x419.jpg')
+    no-repeat center/cover;
+  height: 650px;
+}
+
+.showcase .showcase-overlay {
+  background-color: rgba(59, 57, 57, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 650px;
+  text-align: center;
+  color: #fff;
+}
+
+.showcase .showcase-overlay h1 {
+  font-size: 36px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+.destinations {
+  padding: 50px;
+  text-align: center;
+}
+
+.destinations h3 {
+  font-size: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+.destinations .grid div {
+  background-color: #f1f1f1;
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.destinations .grid div img {
+  border-radius: 10px;
+}
+
+
+@media (min-width: 768px) {
+  .showcase {
+    background-position: top;
+  }
+
+  .showcase .showcase-overlay h1 {
+    font-size: 64px;
+  }
+
+  .showcase .showcase-overlay p {
+    font-size: 18px;
+  }
+
+  .destinations .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .destinations .grid div img {
+    height: 150px;
+    width: 300px;
+  }
+
+  
+}
+
