@@ -4,6 +4,7 @@ export const FeedContext = createContext({
     items: [],
     packages: [],
     trips: [],
+    onboarding: [],
     addItem: (newItem) => {},
     removeItem: (id) => {},
     addPackage: (newPkg) => {},

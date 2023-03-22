@@ -21,7 +21,7 @@ export const Login = () => {
       // maybe trigger a loading screen
       return;
     }
-    if (user) history.replace("/");
+    if (user) history.replace("/dashboard");
   }, [user, loading]);
   return (
     <div className="login">
@@ -77,3 +77,5 @@ export const Login = () => {
     </div>
   );
 };
+
+export default Login;

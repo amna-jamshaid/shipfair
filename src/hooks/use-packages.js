@@ -47,6 +47,7 @@ const usePackages = () => {
   }, [packages]);
 
   return { packages };
-};
+}
+;
 
 export default usePackages;

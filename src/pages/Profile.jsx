@@ -56,8 +56,13 @@ export const Profile = () => {
           <div className="profile-image-container">
             <p className="joining-date">{`Joined on ${new Date().toLocaleDateString("en-US", {month:"long",day:"numeric"})},2021`}</p>
             <div className="verification">
-              <p className="verification-heading">Get Verified</p>
-            </div>
+              <button
+                className= "verification-heading"
+                variant="btn btn-success" onClick={() => {history.push('Onboarding')}}
+              >                
+              Get Verified </button>
+              </div>
+            
             <Stack direction="row" alignItems="center" spacing={2}>
               <label htmlFor="icon-button-file">
                 <Input
@@ -74,6 +79,7 @@ export const Profile = () => {
                   <PhotoCamera className="camera" />
                 </IconButton>
               </label>
+              
             </Stack>
             <div className="username">
               <h2 className="username-heading">{name}</h2>
@@ -104,6 +110,8 @@ export const Profile = () => {
             <div className="card-4 review">
             <p id="about_content"></p>
               <p className="details-heading"></p>
+
+              
             </div>
           </div>
         </div>
